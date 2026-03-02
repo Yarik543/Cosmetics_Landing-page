@@ -10,6 +10,10 @@
   --color-btnHover: #dadcd9;
   --fontIvyMode: "IvyMode", sans-serif;
   --fontAileron: "Aileron", sans-serif;
+  --color-lightGreenCard: #e4ece0;
+  --color-Titles: #213721;
+  --color-Text: #3c5e39;
+  --color-BorderSection: #c8d8c0;
 }
 
 @font-face {
@@ -66,10 +70,11 @@ h1 {
 h2 {
   font-family: var(--fontIvyMode);
   font-weight: 300;
-  font-size: 56px;
+  font-size: 54px;
   line-height: 120%;
   letter-spacing: 1%;
   text-align: left;
+  color: var(--color-Titles);
 }
 
 h3 {
@@ -79,6 +84,7 @@ h3 {
   line-height: 110.00000000000001%;
   letter-spacing: 0%;
   text-align: left;
+  color: var(--color-Titles);
 }
 
 .container {
@@ -91,8 +97,8 @@ h3 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 53.7%;
-  max-height: 733px;
+  width: 51%;
+  height: 727px;
   z-index: -100;
 }
 
@@ -129,13 +135,13 @@ header .container {
 .hero_block .container {
   position: relative;
   padding: 62px 90px 68px 80px;
-  overflow: visible;
+  height: 663px;
 }
 
 .Hero_img {
   position: absolute;
   left: 67px;
-  top: -40px;
+  top: -30px;
   max-height: 780px;
 }
 
@@ -167,6 +173,49 @@ header .container {
 .left_part {
   background-color: white;
   padding: 87px 66px 368px 80px;
+  max-width: 49%;
+  position: relative;
+}
+
+.second-block {
+  display: flex;
+  border-bottom: 2px var(--color-BorderSection) solid;
+}
+
+.secong_blockImage {
+  max-width: 577px;
+  position: absolute;
+  top: 282px;
+  left: 5%;
+}
+
+.right_part {
+  background-color: var(--color-lightGreenCard);
+  padding: 96px 70px 96px 56px;
+}
+
+.right_part img {
+  max-height: 74px;
+}
+
+.plus_number {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+}
+
+.plus_number:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+.text-container p {
+  font-family: var(--fontAileron);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-Text);
+  margin-top: 8px;
 }
 
 @media (hover: hover) {
