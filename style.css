@@ -87,6 +87,15 @@ h3 {
   color: var(--color-Titles);
 }
 
+h4 {
+  font-family: var(--fontAileron);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-Titles);
+}
+
 .container {
   width: 100%;
   padding-inline: 80px;
@@ -143,6 +152,7 @@ header .container {
   left: 67px;
   top: -30px;
   max-height: 780px;
+  z-index: 100;
 }
 
 .Slider_img {
@@ -169,7 +179,7 @@ header .container {
   font-size: 22px;
 }
 
-/*Второй блок*/
+/*Блок 2*/
 .left_part {
   background-color: white;
   padding: 87px 66px 368px 80px;
@@ -179,7 +189,7 @@ header .container {
 
 .second-block {
   display: flex;
-  border-bottom: 2px var(--color-BorderSection) solid;
+  border-bottom: 1.5px var(--color-BorderSection) solid;
 }
 
 .secong_blockImage {
@@ -216,6 +226,74 @@ header .container {
   letter-spacing: 0%;
   color: var(--color-Text);
   margin-top: 8px;
+}
+
+/*Блок 3*/
+.third-block {
+  background-color: white;
+  padding: 96px 0 56px;
+}
+
+.third-block h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-BackGround);
+}
+
+.third-block h2 {
+  text-align: center;
+  max-width: 812px;
+  margin-inline: auto;
+}
+
+/*Блок 4*/
+.fourth-block {
+  background-color: white;
+  border-bottom: 1.5px var(--color-BorderSection) solid;
+  border-top: 1.5px var(--color-BorderSection) solid;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  width: 100%;
+}
+
+.product_img {
+  width: 100%;
+}
+
+.card {
+  padding: 32px;
+  border-right: 1.5px var(--color-BorderSection) solid;
+}
+
+.card h3 {
+  margin-top: 24px;
+}
+
+.price-rates_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.fifth-block {
+  background-color: white;
+  padding: 96px 0;
+  position: relative;
+}
+
+.fifth-block::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  right: 80px;
+  height: 1.5px;
+  background-color: var(--color-BorderSection);
 }
 
 @media (hover: hover) {
