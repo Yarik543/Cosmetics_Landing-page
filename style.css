@@ -280,10 +280,16 @@ header .container {
   margin-top: 24px;
 }
 
+/*Блок 5*/
 .fifth-block {
   background-color: white;
   padding: 96px 0;
   position: relative;
+}
+
+.fifth-block h3 {
+  color: var(--color-BackGround);
+  margin-bottom: 16px;
 }
 
 .fifth-block::after {
@@ -294,6 +300,63 @@ header .container {
   right: 80px;
   height: 1.5px;
   background-color: var(--color-BorderSection);
+}
+
+.fifth-block .container {
+  display: flex;
+  gap: 0 26px;
+}
+
+.titles-container {
+  width: 48%;
+  padding: 0 50px 71px 0;
+}
+
+.fifth-block p {
+  max-width: 50%;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-Text);
+}
+
+/*Блок 6*/
+.sixth-block {
+  background-color: white;
+  padding-top: 96px;
+}
+
+.sixth-block h3 {
+  color: var(--color-BackGround);
+}
+
+.logotypes-container {
+  display: flex;
+  align-items: center;
+  gap: 0 45px;
+  margin: 40px 0 96px;
+}
+
+.logotypes-container img {
+  max-height: 70px;
+}
+
+.container-bottom-green {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-BackGround);
+  padding: 40px 80px;
+}
+
+.container-bottom-green p {
+  font-family: var(--fontIvyMode);
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--color-TextContentColor);
 }
 
 @media (hover: hover) {
