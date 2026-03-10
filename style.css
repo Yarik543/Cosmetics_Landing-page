@@ -62,6 +62,8 @@ body {
   font-family: var(--fontAileron);
   background-color: var(--color-BackGround);
   font-weight: 400;
+  overflow-x: hidden;
+  scroll-snap-type: none;
 }
 
 h1 {
@@ -386,6 +388,10 @@ header .container {
 .seventh-block {
   background-color: white;
   padding-block: 96px;
+}
+
+.dublicates {
+  display: none;
 }
 
 .seventh-block .container {
@@ -1073,6 +1079,219 @@ header .container {
     padding: 15px 32px;
     margin-top: 32px;
     font-size: 16px;
+  }
+
+  /*Блок 2*/
+  .left_part {
+    padding: 64px 20px 20px 20px;
+    max-width: 100%;
+    position: static;
+  }
+
+  .second-block {
+    flex-wrap: wrap;
+  }
+
+  .secong_blockImage {
+    max-width: 100%;
+    position: static;
+    margin-top: 48px;
+  }
+
+  .right_part {
+    padding: 56px 16px;
+    max-width: 100%;
+  }
+
+  .plus_number {
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+
+  .plus_number:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  /*Блок 3*/
+  .third-block {
+    padding: 64px 0 48px;
+  }
+
+  /*Блок 4*/
+  .products-container {
+    grid-template-columns: 100%;
+  }
+
+  .card {
+    padding: 20px;
+    border-bottom: 1.5px var(--color-BorderSection) solid;
+  }
+
+  .price-rates_container {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 8px 0;
+    margin-top: 10px;
+  }
+
+  /*Блок 5*/
+  .fifth-block {
+    padding: 64px 16px;
+  }
+
+  .fifth-block h3 {
+    margin-bottom: 26px;
+  }
+
+  .fifth-block::after {
+    left: 16px;
+    right: 16px;
+  }
+
+  .fifth-block .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 0;
+  }
+
+  .titles-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .fifth-block p {
+    max-width: 100%;
+  }
+
+  /*Блок 6*/
+  .sixth-block {
+    padding: 64px 0;
+  }
+
+  .logotypes-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px 24px;
+    margin: 40px 0 64px;
+  }
+
+  .logotypes-container img {
+    max-height: 79px;
+    max-width: 150px;
+  }
+
+  .container-bottom-green {
+    flex-wrap: wrap;
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .container-bottom-green p {
+    font-family: var(--fontIvyMode);
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: var(--color-TextContentColor);
+  }
+
+  /*Блок 7*/
+  .seventh-block {
+    padding: 0px 0 64px;
+  }
+
+  .seventh-block h2 {
+    max-width: 340px;
+  }
+
+  .seventh-block .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .dublicates {
+    display: block;
+  }
+
+  @keyframes marque-categories {
+    to {
+      translate: -50%;
+    }
+  }
+
+  .scinCategies-menu {
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-top: 48px;
+    animation: marque-categories 20s infinite linear;
+    height: 46px;
+  }
+
+  .scinCategies-menu li {
+    font-size: 16px;
+    padding: 12px 15px;
+    display: block;
+    width: 180px;
+  }
+
+  .scin_products-container {
+    display: grid;
+    gap: 40px 0;
+    grid-template-columns: 100%;
+    width: calc(100% - 55px);
+    margin-inline: auto;
+  }
+
+  .scin_product-card {
+    margin-inline: auto;
+  }
+
+  .btnShop {
+    margin-top: 40px;
+    margin-left: 28px;
+  }
+
+  /*Блок 8*/
+  .eighth-block {
+    background-color: white;
+    padding: 60px 211px 34.3px 181px;
+    display: flex;
+    gap: 0 181px;
+    align-items: center;
+    border-top: 1.5px solid var(--color-BorderSection);
+    border-bottom: 1.5px solid var(--color-BorderSection);
+  }
+
+  .eighth-block h3 {
+    color: var(--color-BackGround);
+    margin-bottom: 16px;
+  }
+
+  .eighth-block p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: var(--color-Text);
+    margin-bottom: 32px;
+    margin-top: 16px;
+  }
+
+  .btnStart-diagnos {
+    padding: 15px 32px;
+    border: 1px solid var(--color-Titles);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: var(--color-Titles);
+    margin-top: 42px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 
