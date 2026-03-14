@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/icon.png" />
+    <title>Velvety - Косметика</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="img/bgImage.png" alt="bgImage" class="bgImage" />
+        <img src="img/Logo.png" alt="Logo" class="logo_img" />
+        <nav>
+          <ul class="menu">
+            <li><a href="#">PAGES</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">CART (0)</a></li>
+            <li>
+              <img
+                src="img/Humburger-menu.png"
+                alt="Humburger"
+                class="Humburger_menu"
+              />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Burger Menu Overlay -->
+    <div class="burger-overlay" id="burgerOverlay"></div>
+
+    <!-- Burger Menu Panel -->
+    <nav class="burger-panel" id="burgerPanel">
+      <div class="burger-panel-header">
+        <img src="img/Logo.png" alt="Velvety" class="burger_logo" />
+        <button class="burger-close" id="burgerClose" aria-label="Закрыть меню">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="burger-list">
+        <li><a href="#" class="burger-link">PAGES</a></li>
+        <li><a href="#" class="burger-link">SHOP</a></li>
+        <li><a href="#" class="burger-link">ABOUT</a></li>
+        <li><a href="#" class="burger-link">LOGIN</a></li>
+        <li><a href="#" class="burger-link burger-cart">CART (0)</a></li>
+      </ul>
+
+      <div class="burger-footer">
+        <div class="burger-social">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8663 16.9185 8 17.25 8C17.5815 8 17.8995 7.8663 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24V15.563H7.078V12.073H10.125V9.413C10.125 6.387 11.917 4.716 14.658 4.716C15.97 4.716 17.344 4.952 17.344 4.952V7.923H15.83C14.338 7.923 13.875 8.854 13.875 9.809V12.073H17.203L16.672 15.563H13.875V24C19.612 23.094 24 18.1 24 12.073Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="burger-copyright">© 2023 VELVETY</p>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero_block">
+        <div class="container">
+          <h1 class="h1_mainTitle">
+            Let nature take care of your body and soul
+          </h1>
+          <button class="btnMain">
+            Shop now
+            <img
+              src="img/Arrow_btnMain.png"
+              alt="Arrow_btnMain"
+              class="Arrow_btnMain"
+            />
+          </button>
+          <img src="img/Hero_Image.png" alt="Hero_Image" class="Hero_img" />
+          <img src="img/Slider.png" alt="Slider" class="Slider_img" />
+          <img
+            src="img/Slider-indicator.png"
+            alt="Slider-indicator"
+            class="Slider-indicator"
+          />
+        </div>
+      </section>
+
+      <section class="second-block">
+        <div class="container left_part">
+          <h2>Inspired by traditional knowledge and nature</h2>
+          <img
+            src="img/secong_blockImage.png"
+            alt="secong_blockImage"
+            class="secong_blockImage"
+          />
+        </div>
+        <div class="container right_part">
+          <article class="plus_number">
+            <img src="img/Organic.png" alt="Organic" class="Organic_img" />
+            <div class="text-container">
+              <h3>100% Organic</h3>
+              <p>
+                We craft skincare using the most exquisite ingredients from the
+                plant, earth and mineral realms.
+              </p>
+            </div>
+          </article>
+          <article class="plus_number">
+            <img src="img/skin.png" alt="skin" class="skin_img" />
+            <div class="text-container">
+              <h3>Fits your skin</h3>
+              <p>
+                I’ts all natural and processed based on traditional knowledge
+                with modern technology.
+              </p>
+            </div>
+          </article>
+          <article class="plus_number">
+            <img src="img/serum.png" alt="serum" class="serum_img" />
+            <div class="text-container">
+              <h3>Easy to use</h3>
+              <p>
+                Packed with a unique design as well as usefull that can help you
+                perform routine skin care.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="third-block">
+        <div class="container">
+          <h3>Our featured products</h3>
+          <h2>Facial and skincare, natural and certified organic</h2>
+        </div>
+      </section>
+
+      <section class="fourth-block">
+        <div class="products-container">
+          <div class="card">
+            <img
+              src="img/Product1_Image.png"
+              alt="Product1_Image"
+              class="Product1_Image product_img"
+            />
+            <h3>CHICORI</h3>
+            <div class="price-rates_container">
+              <h4>$20</h4>
+              <img
+                src="img/Rating-4-stars.png"
+                alt="Rating-4"
+                class="Rating-4_img"
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="img/Product2_Image.png"
+              alt="Product2_Image"
+              class="Product2_Image product_img"
+            />
+            <h3>NOTORIOUS</h3>
+            <div class="price-rates_container">
+              <h4>$23</h4>
+              <img
+                src="img/Rating-5-stars.png"
+                alt="Rating-5"
+                class="Rating-5_img"
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="img/Product3_Image.png"
+              alt="Product3_Image"
+              class="Product3_Image product_img"
+            />
+            <h3>HOLOCENA</h3>
+            <div class="price-rates_container">
+              <h4>$20</h4>
+              <img
+                src="img/Rating-5-stars.png"
+                alt="Rating-5"
+                class="Rating-5_img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fifth-block">
+        <div class="container">
+          <div class="titles-container">
+            <h3>About us</h3>
+            <h2>Velvety facial and skincare company</h2>
+          </div>
+          <p>
+            Velvety is an indigenous company that specializes in the manufacture
+            and development of facial and skincare products using the medicinal
+            properties of the traditional First Nations pharmacopoeia, with a
+            concern for sustainable development. <br /><br />The products
+            offered, whose benefits have been scientifically confirmed, are 100%
+            natural and allow you to take care of your body and mind: calming
+            teas, energizing infusions, anti-inflammatory essential oils,
+            anti-age soaps and creams, etc.
+          </p>
+        </div>
+      </section>
+
+      <section class="sixth-block">
+        <div class="container">
+          <h3>As seen in</h3>
+          <div class="logotypes-container">
+            <img
+              src="img/vogue_logo.png"
+              alt="vogue_logo"
+              class="vogue_logo_img"
+            />
+            <img
+              src="img/forbes_logo.png"
+              alt="forbes_logo"
+              class="forbes_logo_img"
+            />
+            <img
+              src="img/thought_logo.png"
+              alt="thought_logo"
+              class="thought_logo_img"
+            />
+            <img
+              src="img/womensHealth_logo.png"
+              alt="womensHealth_logo"
+              class="womensHealth_logo_img"
+            />
+            <img src="img/wwd_logo.png" alt="wwd_logo" class="wwd_logo_img" />
+          </div>
+        </div>
+        <div class="container-bottom-green">
+          <p>Let's see the processing of our products</p>
+          <img
+            src="img/Arrow-left.png"
+            alt="Arrow-left"
+            class="Arrow-left_img"
+          />
+        </div>
+      </section>
+
+      <section class="seventh-block">
+        <div class="container">
+          <div class="categories-container">
+            <h3>All Products</h3>
+            <h2>Mild skincare & facial routine</h2>
+            <ul class="scinCategies-menu">
+              <li class="scincare active-category">All needs</li>
+              <li class="scincare">Protect</li>
+              <li class="scincare">Regenerates</li>
+              <li class="scincare">Revitalizes</li>
+              <li class="scincare">Feeds</li>
+              <li class="scincare">Regulates</li>
+              <li class="scincare">Purifies</li>
+              <li class="scincare">Makeup Removal</li>
+              <li class="scincare">Exfoliate</li>
+              <li class="scincare">Antioxidant</li>
+              <li class="scincare">Soothes</li>
+              <li class="scincare">Smoothes skin texture</li>
+              <li class="scincare">Tones</li>
+              <li class="scincare">Anti-waste</li>
+              <li class="scincare">Hydrate</li>
+              <li class="scincare">Strengthens</li>
+              <li class="scincare">
+                Regenerates after UV exposure Strengthens
+              </li>
+
+              <div class="dublicates">
+                <li class="scincare active-category">All needs</li>
+                <li class="scincare">Protect</li>
+                <li class="scincare">Regenerates</li>
+                <li class="scincare">Revitalizes</li>
+                <li class="scincare">Feeds</li>
+                <li class="scincare">Regulates</li>
+                <li class="scincare">Purifies</li>
+                <li class="scincare">Makeup Removal</li>
+                <li class="scincare">Exfoliate</li>
+                <li class="scincare">Antioxidant</li>
+                <li class="scincare">Soothes</li>
+                <li class="scincare">Smoothes skin texture</li>
+                <li class="scincare">Tones</li>
+                <li class="scincare">Anti-waste</li>
+                <li class="scincare">Hydrate</li>
+                <li class="scincare">Strengthens</li>
+                <li class="scincare">
+                  Regenerates after UV exposure Strengthens
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="scin-container">
+            <div class="scin_products-container">
+              <div class="scin_product-card">
+                <img
+                  src="img/spinting_img.png"
+                  alt="spinting_img"
+                  class="spinting_img"
+                />
+                <h3>CLASSWING</h3>
+                <h4>$20</h4>
+                <img
+                  src="img/Rating-5-stars.png"
+                  alt="Rating-5"
+                  class="Rating_img"
+                />
+              </div>
+              <div class="scin_product-card">
+                <img
+                  src="img/serum_img.png"
+                  alt="serum_img"
+                  class="serum_img_product"
+                />
+                <h3>HOLOCANE</h3>
+                <h4>$23</h4>
+                <img
+                  src="img/Rating-5-stars.png"
+                  alt="Rating-5"
+                  class="Rating_img"
+                />
+              </div>
+              <div class="scin_product-card">
+                <img
+                  src="img/creamBox_img.png"
+                  alt="creamBox_img"
+                  class="creamBox_img"
+                />
+                <h3>INAMORATA</h3>
+                <h4>$12</h4>
+                <img
+                  src="img/Rating-4_5-stars.png"
+                  alt="Rating-4_5"
+                  class="Rating_img"
+                />
+              </div>
+              <div class="scin_product-card">
+                <img
+                  src="img/cream_img.png"
+                  alt="cream_img"
+                  class="cream_img"
+                />
+                <h3>LIGHTCOOL</h3>
+                <h4>$22.5</h4>
+                <img
+                  src="img/Rating-5-stars.png"
+                  alt="Rating-5"
+                  class="Rating_img"
+                />
+              </div>
+            </div>
+            <button class="btnShop">
+              Shop now
+              <img
+                src="img/Arrow_btnMain.png"
+                alt="Arrow_btn"
+                class="Arrow_btnShop"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="eighth-block">
+        <img
+          src="img/duagnostic_img.png"
+          alt="duagnostic_img"
+          class="duagnostic_img"
+        />
+        <div class="text-block_diagnos">
+          <h3>Try Our Service</h3>
+          <h2>Your skin diagnosis in 3 minutes</h2>
+          <p>
+            Say hello to a more radiant, healthier you with personalized
+            skincare that's as unique as you are.
+          </p>
+          <button class="btnStart-diagnos">
+            Start my diagnosis
+            <img
+              src="img/Arrow_btnMain.png"
+              alt="Arrow_btnMain"
+              class="Arrow_btnStart"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="nineth-block">
+        <div class="container">
+          <img
+            src="img/serum_circle.png"
+            alt="serum_circle"
+            class="serum_circle"
+          />
+          <div class="info-container">
+            <h3>Product Testimonials</h3>
+            <img src="img/Rating.png" alt="Rating" class="Rating" />
+            <blockquote>
+              “I’ve been feeling pretty stressed with my skin lately, so I
+              picked up a set of HOLOCENA skincare. Oh my goodness!. It was
+              AMAZING. My skin felt so soft and moisturized”
+            </blockquote>
+            <p>- Customer Review</p>
+            <img
+              src="img/slider_green.png"
+              alt="slider_green"
+              class="slider_green"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="tenth-block">
+        <div class="container">
+          <div class="card-advantures">
+            <img
+              src="img/Happy_skin.png"
+              alt="Happy_skin"
+              class="Happy_skin_img"
+            />
+            <h5>Loyalty Program</h5>
+            <p>For Happy Skin</p>
+            <button class="btnAdvantures">
+              Join the program
+              <img
+                src="img/Arrow-right.png"
+                alt="Arrow_btnMain"
+                class="Arrow_btnAdvantures"
+              />
+            </button>
+          </div>
+          <img src="img/Separator.png" alt="Separator" class="Separator_img" />
+          <div class="card-advantures">
+            <img src="img/feedback.png" alt="feedback" class="feedback_img" />
+            <h5>Organic beauty is shared,</h5>
+            <p>Sponsor those you love!</p>
+            <button class="btnAdvantures">
+              Refer a Friend
+              <img
+                src="img/Arrow-right.png"
+                alt="Arrow_btnMain"
+                class="Arrow_btnAdvantures"
+              />
+            </button>
+          </div>
+          <img src="img/Separator.png" alt="Separator" class="Separator_img" />
+          <div class="card-advantures">
+            <img
+              src="img/beauty-treatment.png"
+              alt="beauty-treatment"
+              class="beauty-treatmen_img"
+            />
+            <h5>Treat yourself to good weather</h5>
+            <p>at Maison Absolution</p>
+            <button class="btnAdvantures">
+              Try Our Treatments
+              <img
+                src="img/Arrow-right.png"
+                alt="Arrow_btnMain"
+                class="Arrow_btnAdvantures"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="eleventh-block">
+        <div class="container-green_mail">
+          <p>Subscribe to get 10% off your first order</p>
+          <input type="text" placeholder="Drop your email here" />
+          <img src="img/Button.png" alt="Arrow-left" class="Arrow-left_img" />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="blocks-container">
+        <div class="block-info_site">
+          <img src="img/Logo_footer.png" alt="Logo" class="logo_footer" />
+          <h5>Opening hours</h5>
+          <h4>Monday to Saturday: 10:30 a.m. to 7 p.m.</h4>
+          <img
+            src="img/Social_media.png"
+            alt="Social_media"
+            class="Social_media"
+          />
+        </div>
+
+        <div class="shop-block">
+          <h3>Shop</h3>
+          <h4>Skincare</h4>
+          <h4>Facial</h4>
+          <h4>Soap</h4>
+          <h4>Candles</h4>
+          <h4>Auto Fragrances</h4>
+          <h4>Gifts</h4>
+        </div>
+        <div class="helpDesk_block">
+          <h3>Help Desk</h3>
+          <h4>Chat</h4>
+          <h4>FAQ</h4>
+          <h4>Shipping & Returns</h4>
+          <h4>Contact</h4>
+          <h4>Policies</h4>
+          <h4>Accessibility</h4>
+          <h4>My Account</h4>
+        </div>
+        <div class="stores_block">
+          <h3>Stores</h3>
+          <h4>Manhattan</h4>
+          <h4>Brooklyn</h4>
+          <h4>Tokyo</h4>
+          <h4>Jakarta</h4>
+          <h4>Paris</h4>
+          <h4>Buenos Aires</h4>
+        </div>
+      </div>
+      <div class="side-block_info">
+        <p>SITE CREDITS</p>
+        <p>©2023 VELVETY</p>
+      </div>
+      <div class="bottom-block_footer">
+        <div class="container">
+          <p>
+            © Designed by <strong>DhuhaCreative.</strong> Powered by
+            <strong>UI8.</strong>
+          </p>
+          <ul class="block-privacy">
+            <li>Licenses</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
